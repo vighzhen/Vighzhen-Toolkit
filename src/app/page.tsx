@@ -92,7 +92,7 @@ const tools = [
     description: "将文字转换为ASCII艺术字，创建个性化文本图案",
     href: "/tools/ascii-art",
     category: "设计工具",
-    icon: "🖼️"
+    icon: "🎭"
   }
 ]
 

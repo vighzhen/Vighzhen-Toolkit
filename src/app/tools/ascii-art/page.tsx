@@ -564,7 +564,7 @@ export default function AsciiArtTool() {
           <Link href="/" className="text-primary hover:underline">
             ← 返回首页
           </Link>
-          <h1 className="text-3xl font-bold mt-4 mb-2">🖼️ ASCII画生成器</h1>
+          <h1 className="text-3xl font-bold mt-4 mb-2">🎭 ASCII画生成器</h1>
           <p className="text-muted-foreground">将文字和图片转换为ASCII艺术，创建个性化的文本图案</p>
         </div>
 
@@ -812,7 +812,7 @@ export default function AsciiArtTool() {
                 </p>
               </div>
               <div className="space-y-2">
-                <h5 className="font-medium">🖼️ 图片转换</h5>
+                <h5 className="font-medium">📷 图片转换</h5>
                 <p className="text-sm text-muted-foreground">
                   上传图片并转换为ASCII艺术，支持参数调整优化效果
                 </p>
