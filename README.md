@@ -158,7 +158,7 @@ npm run start
 
 如果您有任何问题或建议，欢迎通过以下方式联系我：
 
-- 📧 Email: [your-email@example.com](mailto:your-email@example.com)
+- 📧 Email: [vighzhen@vighzhen.cn](vighzhen@vighzhen.cn)
 - 🐙 GitHub: [@vighzhen](https://github.com/vighzhen)
 - 💬 Issues: [项目 Issues](https://github.com/vighzhen/vighzhen-toolkit/issues)
 
