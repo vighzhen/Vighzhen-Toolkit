@@ -93,6 +93,13 @@ const tools = [
     href: "/tools/ascii-art",
     category: "设计工具",
     icon: "🎭"
+  },
+  {
+    title: "JWT Decoder",
+    description: "解析JWT token并展示结构内容",
+    href: "/tools/jwt-decoder",
+    category: "安全工具",
+    icon: "🔐"
   }
 ]
 
