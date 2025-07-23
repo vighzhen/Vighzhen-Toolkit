@@ -555,7 +555,7 @@ export default function AsciiArtTool() {
     setImagePreview('')
   }
 
-  const sampleTexts = ['HELLO', 'ASCII', 'ART', '2024']
+  const sampleTexts = ['HELLO', 'ASCII', 'ART', '2025']
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-muted">
