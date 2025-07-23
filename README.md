@@ -1,11 +1,11 @@
-# 🛠️ Vighzhen Toolkit
+🛠️ Vighzhen Toolkit
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub release](https://img.shields.io/github/release/vighzhen/vighzhen-toolkit.svg)](https://github.com/vighzhen/vighzhen-toolkit/releases)
 [![GitHub stars](https://img.shields.io/github/stars/vighzhen/vighzhen-toolkit.svg)](https://github.com/vighzhen/vighzhen-toolkit/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/vighzhen/vighzhen-toolkit.svg)](https://github.com/vighzhen/vighzhen-toolkit/network)
 [![GitHub issues](https://img.shields.io/github/issues/vighzhen/vighzhen-toolkit.svg)](https://github.com/vighzhen/vighzhen-toolkit/issues)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-site-id/deploy-status)](https://app.netlify.com/sites/your-site-name/deploys)
+
 
 > 一个现代化的在线工具集合，专为提升工作效率而设计
 
