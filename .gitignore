@@ -131,3 +131,11 @@ dist
 # Temporary folders
 tmp/
 temp/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+.docker/
+
+# Task files
+*-task.md

@@ -1,0 +1,81 @@
+# Docker Compose configuration for Vighzhen Toolkit
+version: '3.8'
+
+services:
+  # 生产环境服务
+  vighzhen-toolkit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: vighzhen-toolkit-prod
+    ports:
+      - "3000:8080"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - vighzhen-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.vighzhen.rule=Host(`localhost`)"
+      - "traefik.http.services.vighzhen.loadbalancer.server.port=8080"
+
+  # 开发环境服务
+  vighzhen-toolkit-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: vighzhen-toolkit-dev
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=development
+      - WATCHPACK_POLLING=true
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    restart: unless-stopped
+    networks:
+      - vighzhen-network
+    profiles:
+      - dev
+
+  # Nginx 反向代理 (可选)
+  nginx-proxy:
+    image: nginx:alpine
+    container_name: vighzhen-nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/proxy.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - vighzhen-toolkit
+    restart: unless-stopped
+    networks:
+      - vighzhen-network
+    profiles:
+      - proxy
+
+networks:
+  vighzhen-network:
+    driver: bridge
+    name: vighzhen-network
+
+volumes:
+  node_modules:
+    name: vighzhen-node-modules
+
+# 使用示例:
+# 生产环境: docker-compose up -d
+# 开发环境: docker-compose --profile dev up -d vighzhen-toolkit-dev
+# 带代理: docker-compose --profile proxy up -d

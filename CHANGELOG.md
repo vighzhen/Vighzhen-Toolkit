@@ -9,6 +9,14 @@
 
 ### 新增
 - 准备 GitHub 发布的相关文件和配置
+- 🐳 **Docker 支持** - 添加完整的 Docker 容器化支持
+  - 多阶段构建 Dockerfile，优化镜像体积（~20MB）
+  - 基于 Nginx 的生产环境配置
+  - 开发环境 Docker 配置，支持热重载
+  - Docker Compose 编排文件
+  - 自动包管理器检测（npm/yarn/pnpm/bun）
+  - 非 root 用户运行，提升安全性
+  - 健康检查和性能优化
 
 ## [1.0.0] - 2025-7-23
 

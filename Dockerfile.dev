@@ -1,0 +1,53 @@
+# 开发环境 Dockerfile for Vighzhen Toolkit
+# 支持热重载和开发工具
+
+FROM node:18-alpine
+
+# 设置工作目录
+WORKDIR /app
+
+# 安装必要的系统依赖
+RUN apk add --no-cache \
+    git \
+    curl \
+    bash
+
+# 创建非root用户
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nextjs -u 1001
+
+# 复制包管理文件
+COPY --chown=nextjs:nodejs package*.json ./
+COPY --chown=nextjs:nodejs yarn.lock* ./
+COPY --chown=nextjs:nodejs pnpm-lock.yaml* ./
+COPY --chown=nextjs:nodejs bun.lockb* ./
+
+# 安装依赖 - 包含开发依赖
+RUN if [ -f yarn.lock ]; then yarn install; \
+    elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm install; \
+    elif [ -f bun.lockb ]; then npm install -g bun && bun install; \
+    else npm install; fi
+
+# 复制源代码
+COPY --chown=nextjs:nodejs . .
+
+# 切换到非root用户
+USER nextjs
+
+# 暴露端口
+EXPOSE 3000
+
+# 设置环境变量
+ENV NODE_ENV=development
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV WATCHPACK_POLLING=true
+
+# 健康检查
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:3000/ || exit 1
+
+# 启动开发服务器
+CMD if [ -f yarn.lock ]; then yarn dev; \
+    elif [ -f pnpm-lock.yaml ]; then pnpm dev; \
+    elif [ -f bun.lockb ]; then bun run dev; \
+    else npm run dev; fi
