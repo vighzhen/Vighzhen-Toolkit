@@ -100,6 +100,13 @@ const tools = [
     href: "/tools/jwt-decoder",
     category: "安全工具",
     icon: "🔐"
+  },
+  {
+    title: "SmartSQL Importer",
+    description: "智能数据导入工具，支持Excel/CSV转SQL插入语句",
+    href: "/tools/smart-sql-importer",
+    category: "开发工具",
+    icon: "🗄️"
   }
 ]
 
