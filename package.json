@@ -1,7 +1,23 @@
 {
-  "name": "nextjs-shadcn",
-  "version": "0.1.0",
-  "private": true,
+  "name": "vighzhen-toolkit",
+  "version": "1.0.0",
+  "description": "一个现代化的在线工具集合，提供14个精心设计的实用工具，涵盖开发、设计、安全、实用等多个领域",
+  "keywords": ["toolkit", "tools", "utilities", "nextjs", "react", "typescript", "shadcn"],
+  "author": {
+    "name": "Vighzhen",
+    "email": "vighzhen@vighzhen.cn",
+    "url": "https://github.com/vighzhen"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vighzhen/vighzhen-toolkit.git"
+  },
+  "homepage": "https://github.com/vighzhen/vighzhen-toolkit",
+  "bugs": {
+    "url": "https://github.com/vighzhen/vighzhen-toolkit/issues"
+  },
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

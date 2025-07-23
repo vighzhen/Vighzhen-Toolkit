@@ -1,5 +1,12 @@
 # 🛠️ Vighzhen Toolkit
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub release](https://img.shields.io/github/release/vighzhen/vighzhen-toolkit.svg)](https://github.com/vighzhen/vighzhen-toolkit/releases)
+[![GitHub stars](https://img.shields.io/github/stars/vighzhen/vighzhen-toolkit.svg)](https://github.com/vighzhen/vighzhen-toolkit/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/vighzhen/vighzhen-toolkit.svg)](https://github.com/vighzhen/vighzhen-toolkit/network)
+[![GitHub issues](https://img.shields.io/github/issues/vighzhen/vighzhen-toolkit.svg)](https://github.com/vighzhen/vighzhen-toolkit/issues)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-site-id/deploy-status)](https://app.netlify.com/sites/your-site-name/deploys)
+
 > 一个现代化的在线工具集合，专为提升工作效率而设计
 
 ## 👋 关于我
@@ -143,7 +150,27 @@ npm run start
 4. 推送到分支 (`git push origin feature/AmazingFeature`)
 5. 打开一个 Pull Request
 
+## 🤝 贡献
+
+我们欢迎任何形式的贡献！请查看 [贡献指南](CONTRIBUTING.md) 了解如何参与项目开发。
+
+### 快速开始贡献
+
+1. Fork 本项目
+2. 创建您的功能分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交您的更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 打开一个 Pull Request
+
+### 报告问题
+
+如果您发现了 bug 或有功能建议，请：
+- 查看 [现有 Issues](https://github.com/vighzhen/vighzhen-toolkit/issues)
+- 创建 [新的 Issue](https://github.com/vighzhen/vighzhen-toolkit/issues/new/choose)
+
 ## 📝 开发计划
+
+查看我们的 [项目路线图](https://github.com/vighzhen/vighzhen-toolkit/projects) 了解未来的开发计划：
 
 - [ ] 添加更多实用工具
 - [ ] 支持工具收藏功能
@@ -151,6 +178,16 @@ npm run start
 - [ ] 支持自定义主题
 - [ ] 添加工具分享功能
 - [ ] 支持离线使用
+- [ ] 多语言支持
+- [ ] 移动端 PWA 支持
+
+## 📋 更新日志
+
+查看 [CHANGELOG.md](CHANGELOG.md) 了解详细的版本更新历史。
+
+## 🔒 安全
+
+如果您发现了安全漏洞，请查看我们的 [安全政策](SECURITY.md) 了解如何负责任地报告。
 
 ## 📄 许可证
 
