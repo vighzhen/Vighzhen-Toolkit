@@ -104,7 +104,7 @@ export default function JWTDecoderTool() {
           <Link href="/" className="text-primary hover:underline">
             ← 返回首页
           </Link>
-          <h1 className="text-3xl font-bold mt-4 mb-2">� JWT Decoder</h1>
+          <h1 className="text-3xl font-bold mt-4 mb-2">🎫 JWT Decoder</h1>
           <p className="text-muted-foreground">解析JWT token并展示其结构内容</p>
         </div>
 

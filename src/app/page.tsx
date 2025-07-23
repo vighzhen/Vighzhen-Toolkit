@@ -99,7 +99,7 @@ const tools = [
     description: "解析JWT token并展示结构内容",
     href: "/tools/jwt-decoder",
     category: "安全工具",
-    icon: "🔐"
+    icon: "🎫"
   },
   {
     title: "SmartSQL Importer",
