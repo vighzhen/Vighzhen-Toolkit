@@ -107,6 +107,13 @@ const tools = [
     href: "/tools/smart-sql-importer",
     category: "开发工具",
     icon: "🗄️"
+  },
+  {
+    title: "格式转换器",
+    description: "PDF转Word、文本转换等格式转换",
+    href: "/tools/format-converter",
+    category: "实用工具",
+    icon: "🔄"
   }
 ]
 
